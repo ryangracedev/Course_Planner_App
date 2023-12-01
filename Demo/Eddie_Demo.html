@@ -1,0 +1,100 @@
+<!-- Initial set up guide with CDN: https://blog.js.cytoscape.org/2016/05/24/getting-started/ -->
+<!-- Added/Changed:
+      1) Autolock - no dragging nodes
+      2) Colour scheme,shape of nodes
+      3) Number of nodes  
+      4) Added labels-->
+      <!doctype html>
+      <html>
+      <head>
+          <title>Tutorial 1: Getting Started</title>
+          <h2>Eddie Cytoscape Demo</h2>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.27.0/cytoscape.min.js" integrity="sha512-ZNCw/dHSJygOg60ih5fI0f2RKqa8EeVm2ivm3PcrD6SEv2WzK8VJoe5IxS4QzvLcaSIQeaxgZMRCW01QlVJTZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      </head>
+      <style>
+          #cy {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0px;
+              left: 0px;
+          }
+      </style>
+      
+      <body>
+          <div id="cy"></div>
+          <script type="text/javascript">
+        var cy = cytoscape({
+          container: document.getElementById('cy'),
+      elements: [
+        // nodes
+        { data: { id: 'a',label:'CIS*1300' } },
+        { data: { id: 'b',label:'CIS*2500'} },
+        { data: { id: 'c',label:'CIS*2750' } },
+        { data: { id: 'd',label:'CIS*3750' } },
+        { data: { id: 'e',label:'CIS*2520' } },
+        { data: { id: 'f',label:'CIS*3190' } },
+        // edges
+        {
+          data: {
+            id: 'ab',
+            source: 'a',
+            target: 'b'
+          }
+        },
+        {
+          data: {
+            id: 'cd',
+            source: 'c',
+            target: 'd'
+          }
+        },
+        {
+          data: {
+            id: 'ef',
+            source: 'e',
+            target: 'f'
+          }
+        },
+        {
+          data: {
+            id: 'ac',
+            source: 'a',
+            target: 'c'
+          }
+        },
+        {
+          data: {
+            id: 'be',
+            source: 'b',
+            target: 'e'
+          }
+        }
+      ],
+      
+            style: [
+                {
+                    "selector": 'node',
+                    "style": {
+                        "shape": 'pentagon',
+                        'background-color': 'teal',
+                    }
+                },  
+                {
+                  "selector": "node[label]",
+                  "style": {
+                    "label": "data(label)"
+                  }
+        }],
+      //           layout: {
+      //     name: 'grid'
+      // }
+         
+        });
+        cy.autolock(true);//Setting the autolock to true
+      </script>
+      </body>
+      
+      </html>
+      
+      

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README Documentation</title>
+    <style>
+        img {
+            max-width: 100%;
+        }
+
+        blockquote {
+            border-left: 3px solid #ccc;
+            margin-left: 0;
+            padding-left: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            padding: 10px;
+        }
+
+        pre {
+            border: 1px solid gray;
+            padding: 10px;
+            border-radius: 15px;
+            background-color: rgb(224, 224, 224);
+        }
+
+        .chrome {
+            padding-left: 80px;
+            padding-right: 80px;
+            padding-top: 10px;
+            padding-bottom: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img src="https://admission.uoguelph.ca/sites/default/files/images/GeneralBanner5_2018.jpg" alt="Guelph Campus">
+
+    <h1>API Documentation</h1>
+
+    <h2>REST API</h2>
+    <p>Our API is accessible at:</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php</a>
+    </blockquote>
+    <p>Through our GET, POST, PUT, and DELETE requests, it can retrieve, add, update or delete data in our database.</p>
+    <p>A request URL follows the query structure, meaning that the api has a query handler that obtains all parameters past the '?' character in the URL to obtain the information needed to fulfill a request.</p>
+
+    <h2>GET</h2>
+    <hr>
+    <h3>?course={code}</h3>
+    <p>Will get all data associated with the course with the code: {code}</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course=CIS*1300">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course=CIS*1300</a>
+    </blockquote>
+    <hr>
+
+    <h3>?course=all</h3>
+    <p>Will get all data associated with all courses.</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course=all">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course=all</a>
+    </blockquote>
+    <hr>
+
+    <h3>?subject={subject_area}</h3>
+    <p>Will get all the courses where the subject is: {subject_area}</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?subject=CIS">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?subject=CIS</a>
+    </blockquote>
+    <hr>
+
+    <h3>?subject=all</h3>
+    <p>Will get all the subjects currently in the database</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?subject=all">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?subject=all</a>
+    </blockquote>
+    <hr>
+
+    <h3>?prereq={code}</h3>
+    <p>Will get the prereqs for the course with the code: {code}</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?prereq=CIS*1300">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?prereq=CIS*1300</a>
+    </blockquote>
+    <hr>
+
+    <p>The GET request <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?findCourses=True">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?findCourses=True</a> loads a form that can call our POST request.</p>
+
+    <h2>POST</h2>
+    <hr>
+    <p>The POST request will take prerequisite courses, and return courses one can take. The POST request must have the following body format:</p>
+    <blockquote>
+        "course": {courseCode}
+    </blockquote>
+    <p>Or if there are multiple then:</p>
+    <blockquote>
+        "course1": {courseCode}, "course2": {courseCode}
+    </blockquote>
+    <p>The POST request is also accessible through the form at:</p>
+    <blockquote>
+        <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?findCourses=True">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?findCourses=True</a>
+    </blockquote>
+
+    <h2>PUT</h2>
+    <hr>
+    <p>The PUT request must have the following body format:</p>
+    <pre>
+subject_area: {codeSubject},
+number: {codeNum},
+name: {courseName},
+weight: {courseWeight},
+description: {courseDesc},
+department: {courseDept},
+location: {courseLocation},
+prerequisites: {coursePrereqs},
+requirements_id:0,
+credits_required:{reqCreds}
+    </pre>
+
+    <h3>Descriptions</h3>
+    <p>
+        {codeSubject} - the subject part of a course code (e.g, 'CIS' in 'CIS*1300')<br>
+        {codeNum} - the number part of a course code (e.g, '1300' in 'CIS*1300')<br>
+        {courseName} - the course's name<br>
+        {courseWeight} - the course's credit weighting<br>
+        {courseDesc} - the course's description<br>
+        {courseDept} - the course's department<br>
+        {courseLocation} - the course's building location<br>
+        {coursePrereqs} - the course's prerequisites<br>
+        {reqCreds} - the amount of completed credits required to take this course
+    </p>
+
+    <h2>Running</h2>
+    <hr>
+    <p>There are three ways you can run our REST API:</p>
+
+    <h3>1. Through the URL</h3>
+    <p>Going to <a href="https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course={code}">https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course={code}</a> will automatically serve a GET request to our server, and all the courses will be displayed.</p>
+    <p>This method will only work with GET requests, as POST, PUT, and DELETE requests must be sent by other methods.</p>
+    <hr>
+
+    <h3>2. Using Postman</h3>
+    <p>Postman is both a web-based and desktop-based application. It allows us to send specific HTTP requests to our server. Ensure that if the request type requires a body, that you follow the same format as specified above depending on the request type.</p>
+    <hr>
+
+    <h3>3. Chrome Console</h3>
+    <p>Going to <a href="https://cis3760f23-10.socs.uoguelph.ca">https://cis3760f23-10.socs.uoguelph.ca</a> and inspecting the webpage to open the console allows us to create a request and send it to the server, where it will be handled accordingly. 
+        <br><br>Below are the formats of the requests that are expected from the server:</p>
+    <div class="chrome">
+        <h3>POST</h3>
+        <hr>
+        <p>As mentioned above, the POST request must have the following body:</p>
+        <blockquote>
+            "course": {courseCode}
+        </blockquote>
+        <p>Or if there are multiple then:</p>
+        <blockquote>
+            "course1": {courseCode}, "course2": {courseCode}
+        </blockquote>
+        <p>After sending the request, you'll receive the courses you can take, or you'll receive an appropriate error message.</p>
+        <p>For example, to find courses you can take, you would inspect the <a href="https://cis3760f23-10.socs.uoguelph.ca">https://cis3760f23-10.socs.uoguelph.ca</a> webpage and send the following request in the inspect console:</p>
+        <pre>
+        fetch("https://cis3760f23-10.socs.uoguelph.ca/rest/api.php", {
+        method: "POST",
+        body: JSON.stringify({
+            "course1": "CIS*2750", "course2": "CIS*3750"
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+        })
+        </pre>
+        <h3>PUT</h3>
+        <hr>
+        <p>As mentioned above, the PUT request must have the following body:</p>
+        <pre>
+        subject_area: {codeSubject},
+        number: {codeNum},
+        name: {courseName},
+        weight: {courseWeight},
+        description: {courseDesc},
+        department: {courseDept},
+        location: {courseLocation},
+        prerequisites: {coursePrereqs},
+        requirements_id:0,
+        credits_required:{reqCreds}
+        </pre>
+        <p>After sending the request, the course you entered will be updated, or you'll receive an appropriate error message.</p>
+        <p>For example, to update an existing course's info in the database (in this case, changing CIS*1700's credit weighting to 1.0), you would inspect the <a href="https://cis3760f23-10.socs.uoguelph.ca">https://cis3760f23-10.socs.uoguelph.ca</a> webpage and send the following request in the inspect console:</p>
+        <pre>
+        fetch("https://cis3760f23-10.socs.uoguelph.ca/rest/api.php", {
+        method: "PUT",
+        body: JSON.stringify({
+            subject_area: "CIS",
+            number: 1700,
+            name: "Intro to Better programming",
+            weight: 1.0,
+            description: "Learn better programming",
+            department: "CEPS",
+            location: "MCKN",
+            prerequisites: "",
+            requirements_id:0,
+            credits_required:10
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+        })
+        </pre>
+    </div>
+    <hr>
+    <h2>Database</h2>
+    <p>Data previously in our excel file is now located in the MySQL database on the server. The "courses" table contains the columns:</p>
+    <blockquote>
+        "subject_area", "number", "name", "weight", "description", "department", "location", "prerequisites", "requirements_id", "credits_required"
+    </blockquote>
+    <p>This is where the main information for all the courses is stored and is what our API currently accesses. This was directly imported from our previous excel file.</p>
+    <p>We also have the "equates" table with the columns:</p>
+    <blockquote>
+        "course_id", "equated_id"
+    </blockquote>
+    <p>The "offerings" table with the columns:</p>
+    <blockquote>
+        "id", "course_id", "semester"
+    </blockquote>
+    <p>The requirements table with the columns:</p>
+    <blockquote>
+        "id", "parent_id", "num_required"
+    </blockquote>
+    <p>And the "course_requirements" table with the columns:</p>
+    <blockquote>
+        "course_id", "requirement_id"
+    </blockquote>
+
+
+</body>
+
+</html>

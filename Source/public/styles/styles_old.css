@@ -1,0 +1,68 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    /* font-size: 12px; */
+}
+
+h2 {
+    margin-top: 60px;
+}
+
+.code-block {
+    background-color: #eeeeee;
+}
+code {
+    font-family: monospace;
+}
+
+p,
+.endpoint {
+    font-size: 14px;
+}
+
+hr {
+    color: #eeeeee;
+}
+
+.container {
+    width: 100%;
+}
+
+@media only screen and (min-width: 700px) {
+    .container {
+        width: 50%;
+        margin: auto;
+    }
+}
+
+.endpoint table {
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid #eeeeee;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.api-endpoint {
+    font-family: monospace;
+    font-size: 12px;
+    background-color: #eeeeee;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 5px 10px;
+}
+
+.api-endpoint span {
+    margin-right: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: inherit;
+}

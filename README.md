@@ -1,103 +1,207 @@
-# Sprint 2
+![Guelph Campus](https://admission.uoguelph.ca/sites/default/files/images/GeneralBanner5_2018.jpg)
 
-## Webscraper
+# Sprint 7
 
-Using Python and the Playwright, course descriptions defined in the [course calendar](https://calendar.uoguelph.ca/undergraduate-calendar/) are scraped and output to `course_desc.txt`.\
-An empty line will be inserted at the end of each course to indicate the end of the record. Leading and trailing whitespace will be removed.
+## REST API
 
-### Running
+Our API is accessible at:
 
-**Prerequisite**: Python 3.xx, pip and virtualenv are installed. Using a virtual environment is recommended to avoid installing Python packages globally and to containerize your development environment. Instructions for working with [virtualenv](https://www.freecodecamp.org/news/how-to-setup-virtual-environments-in-python/).\
- **Windows + Mac**: After activating virtual environment:
+> https://cis3760f23-10.socs.uoguelph.ca/rest
 
+Through our POST and PUT requests, it can retreive, add, update or delete data in our database.
+
+A request URL follows the rest structure, meaning that the api will invoke a certain endpoint that you specify in the URL. It will then read your input through the HTTP request's body.
+
+## POST
+
+#### `/course`
+Will retrieve all data associated with a course with the code: {code} where the body is:
+
+#### `"course": {courseCode}`
+
+Example:  
+> https://cis3760f23-10.socs.uoguelph.ca/rest/course
+
+Request Body:
+
+#### `"course": "CIS*1300"`
+
+The following request body will get all data associated with all courses:
+
+#### `"course": "all"`
+
+---
+#### `/subject`
+
+Will retrieve all the courses where the subject is: {subject_area} and the body is:
+
+#### `"subject": {subject_area}`
+
+Example:
+>https://cis3760f23-10.socs.uoguelph.ca/rest/subject
+
+Request Body:
+
+#### `"subject": "CIS"`
+
+The following request body will get all data associated with all courses:
+
+#### `"subject": "all"`
+
+---
+#### `/prereq`
+
+Will retrieve the prereqs for the course with the code: {code} where the body is:
+
+#### `"prereq": {courseCode}`
+
+Example:  
+> https://cis3760f23-10.socs.uoguelph.ca/rest/prereq
+
+Request Body:
+
+#### `"prereq": "CIS*1300"`
+
+---
+#### `/api`
+The POST request will take prerequisite courses, and return courses one can take. The POST request must have the following body format: 
+
+#### `"course": {courseCode}`
+
+Or if there are multiple then: 
+
+#### `"course1": {courseCode}, "course2": {courseCode}`
+
+The POST request is also accessible through the form at:
+https://cis3760f23-10.socs.uoguelph.ca/rest/api?findCourses=True
+
+## PUT
+The PUT request must have the following body format:
 ```
-pip install playwright
-playwright install
-cd Source/python/webscraper
-python3 course_desc.py
+subject_area: {codeSubject},
+number: {codeNum},
+name: {courseName},
+weight: {courseWeight},
+description: {courseDesc},
+department: {courseDept},
+location: {courseLocation},
+prerequisites: {coursePrereqs},
+requirements_id:0,
+credits_required:{reqCreds}
 ```
 
-**Linux**: Incompatible with school servers as playwright is a non-standard python package. Don't have the necessary permissions as a student to install it through Python package manager(pip).
+### Descriptions 
 
-### Output Format
+`{codeSubject}` - the subject part of a course code (e.g, 'CIS' in 'CIS*1300')\
+`{codeNum}` - the number part of a course code (e.g, '1300' in 'CIS*1300')\
+`{courseName}` - the course's name\
+`{courseWeight}` - the course's credit weighting\
+`{courseDesc}` - the course's description\
+`{courseDept}` - the course's department\
+`{courseLocation}` - the course's building location\
+`{coursePrereqs}` - the course's prerequisites\
+`{reqCreds}` - the amount of completed credits required to take this course
 
+## Running
+
+There are two ways you can run our REST API:
+
+### 1. Using Postman
+
+Postman is both a web based, and desktop based application. It allows us to send specific HTTP requests to our server. Ensure that if the request type requires a body, that you follow the same format as specified above depending on the request type.
+
+---
+
+### 2. Chrome Console
+
+Going to https://cis3760f23-10.socs.uoguelph.ca and inspecting the webpage to open the console allows us to create a request and send it to the server, where it will be handled accordingly. Below are the formats of the requests that are expected from the server:
+
+---
+
+#### POST
+
+As mentioned above, the `/api` POST request must have the following body:
+
+#### `"course": {courseCode}`
+
+Or if there are multiple then: 
+
+#### `"course1": {courseCode}, "course2": {courseCode}`
+
+After sending the request, you'll receive the courses you can take, or you'll receive an appropriate error message.
+
+For example, to find courses you can take, you would inspect the https://cis3760f23-10.socs.uoguelph.ca webpage and send the following request in the inspect console:
 ```
-ACCT*1220
-Introductory Financial Accounting
-Summer, Fall, and Winter
-[0.50]
-This course will introduce students to the fundamental concepts and practices of Financial Accounting. Students are expected to become adept at performing the functions related to the accounting cycle, including the preparation of financial statements.
-Offering(s): Also offered through Distance Education format.
-Restriction(s): ACCT*2220. This is a Priority Access Course. Enrolment may be restricted to particular programs or specializations. See department for more information.
-Department(s): Department of Management
-Location(s): Guelph
-
-ACCT*1240
-Applied Financial Accounting
-Winter Only
-[0.50]
-This course requires students to apply the fundamental principles emanating from accounting's conceptual framework and undertake the practice of financial accounting. Students will become adept at performing the functions related to each step in the accounting cycle, up to and including the preparation of the financial statements and client reports. Students will also develop the skills necessary for assessing an organization's system of internal controls and financial conditions.
-Offering(s): Also offered through Distance Education format.
-Prerequisite(s): ACCT*1220 or ACCT*2220
-Restriction(s): ACCT*2240. This is a Priority Access Course. Enrolment may be restricted to particular programs or specializations. See department for more information.
-Department(s): Department of Management
-Location(s): Guelph
-```
-
-## Parser
-
-Asks for the file path to `course_desc.txt`, each course in the file is parsed and information is put into its own `Course` object. Using the information in the course object, data is written to a CSV file.
-
-**Note**: Initially, prerequisites are consumed as a singular string. Each course code found in a given string is extracted into it's own column/cell and finally the original string is stored in its own column as well.
-
-> **Original String**: ACCT*1220 or ACCT*2220\
-> **Individual columns for prerequisites**: ACCT*1220, ACCT*2220, ACCT*1220 or ACCT*2220
-
-### Example CSV File: [Courses.csv](https://gitlab.socs.uoguelph.ca/cis3760_f23/f23_cis3760_302/-/blob/sprint1/Source/python/parser/courses.csv)
-
-### Running
-
-**Prerequisite**: Python 3.xx\
-Compatible on Windows, Mac, Linux
-
-```
-cd Source/parser
-python3 course_parser.py
-[File Path: "../webscraper/course_desc.txt"]
-```
-
-## CLI
-
-Data is read from the CSV file created from parser and course information from each row is put into its own `Course` object to be leveraged by the CLI.\
-CLI can perform 2 actions given a course code:
-
-1. List the course's prerequisites
-2. List all the course's information
-
-### Running
-
-**Prerequisite**: Python 3.xx\
-Compatible on Windows, Mac, Linux
-
-```
-cd Source/python
-python3 main.py
+fetch("https://cis3760f23-10.socs.uoguelph.ca/rest/api", {
+  method: "POST",
+  body: JSON.stringify({
+    "course1": "CIS*2750", "course2": "CIS*3750"
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+})
 ```
 
-## VBA Course Recommendations
+---
 
-The `coursesMacro.xslm` file contains a program that when a user enters their completed courses, they can get a highlighted list of acceptable courses that they can take next semester.
+#### PUT
 
-### Usage
+As mentioned above, the PUT request must have the following body:
+```
+subject_area: {codeSubject},
+number: {codeNum},
+name: {courseName},
+weight: {courseWeight},
+description: {courseDesc},
+department: {courseDept},
+location: {courseLocation},
+prerequisites: {coursePrereqs},
+requirements_id:0,
+credits_required:{reqCreds}
+```
 
-1. Open `coursesMacro.xslm`
-2. Open "input" tab
-3. Enter course codes of completed courses in column "A" under the header
-4. Click Run
-5. Browse highlighted courses in spreadsheet
+After sending the request, the course you entered will be updated, or you'll receive an appropriate error message.
 
-### Limitations
+For example, to update an existing course's info in the database (in this case, changing CIS*1700's credit weighting to 1.0), you would inspect the https://cis3760f23-10.socs.uoguelph.ca webpage and send the following request in the inspect console:
+```
+fetch("https://cis3760f23-10.socs.uoguelph.ca/rest/api", {
+  method: "PUT",
+  body: JSON.stringify({
+    subject_area: "CIS",
+    number: 1700,
+    name: "Intro to Better programming",
+    weight: 1.0,
+    description: "Learn better programming",
+    department: "CEPS",
+    location: "MCKN",
+    prerequisites: "",
+    requirements_id:0,
+    credits_required:10
+  }),
+  headers: {
+    "Content-type": "application/json; charset=UTF-8"
+  }
+})
+```
 
-Currently the VBA program does not recognize the "including" keyword. On courses that use this keyword the program may not recognize that the courses listed are requirements.
 
-The program also does not play nicely when blurbs of text are in the prerequisite list. These can cause unpredictable behaviour and may suggest the incorrect courses for the student
+## Database
+
+Data previously in our excel file is now located in the MySQL database on the server. The "courses" table contains the columns:
+
+#### `"subject_area", "number", "name", "weight", "description", "department", "location", "prerequisites", "requirements_id", "credits_required"`
+
+This is where the main information for all the courses is stored and is what our API currently accesses. This was directly imported from our previous excel file.
+
+We also have the "equates" table with the columns:
+#### `"course_id", "equated_id"`
+
+The "offerings" table with the columns: 
+#### `"id", "course_id", "semester"`
+
+The requirements table with the columns: 
+#### `"id", "parent_id", "num_required"`
+
+And the "course_requirements" table with the columns: 
+#### `"course_id", "requirement_id"`

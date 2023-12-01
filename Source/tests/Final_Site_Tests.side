@@ -1,0 +1,1284 @@
+{
+  "id": "aee6a7f3-0d72-4b62-bd1d-66b2afdb43c4",
+  "version": "2.0",
+  "name": "Final_Site_Tests",
+  "url": "https://cis3760f23-10.socs.uoguelph.ca/",
+  "tests": [{
+    "id": "ba1899b3-2b2b-4093-bf8f-199ea0d0daba",
+    "name": "OP_SENG_First-Year_F23",
+    "commands": [{
+      "id": "e957f5a8-a057-4083-992d-65830d5c88b0",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "665a15ae-c0f4-4599-8f20-dfa056d727fb",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "26d5b5b4-6f75-46ac-b1de-ea9b478e522d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Online Planner",
+      "targets": [
+        ["linkText=Online Planner", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Planner')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'planner')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Planner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "01e796a8-7627-48a5-822f-813f9a9942df",
+      "comment": "",
+      "command": "click",
+      "target": "id=subject-select",
+      "targets": [
+        ["id=subject-select", "id"],
+        ["name=subject_area", "name"],
+        ["css=#subject-select", "css:finder"],
+        ["xpath=//select[@id='subject-select']", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/div[2]/label/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "34cef727-141f-4e47-a343-754af8c12b40",
+      "comment": "",
+      "command": "select",
+      "target": "id=subject-select",
+      "targets": [],
+      "value": "label=CIS"
+    }, {
+      "id": "d87f7c2f-7d0c-4ac7-a81c-e7984abe19c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apply Filters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "996dbf29-d323-4298-aeb6-3340a6823923",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=inlineCheckbox2",
+      "targets": [
+        ["id=inlineCheckbox2", "id"],
+        ["css=#inlineCheckbox2", "css:finder"],
+        ["xpath=//input[@id='inlineCheckbox2']", "xpath:attributes"],
+        ["xpath=//div[@id='semester-filter']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5129224-8ee5-4f3a-9c52-ae1c8723f852",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineCheckbox2",
+      "targets": [
+        ["id=inlineCheckbox2", "id"],
+        ["css=#inlineCheckbox2", "css:finder"],
+        ["xpath=//input[@id='inlineCheckbox2']", "xpath:attributes"],
+        ["xpath=//div[@id='semester-filter']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ba912c1-ddd6-4f1c-8095-6688912100a6",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=inlineCheckbox2",
+      "targets": [
+        ["id=inlineCheckbox2", "id"],
+        ["css=#inlineCheckbox2", "css:finder"],
+        ["xpath=//input[@id='inlineCheckbox2']", "xpath:attributes"],
+        ["xpath=//div[@id='semester-filter']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32e53365-b6ec-446c-950e-8623682e2da5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apply Filters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "48154e6d-4b72-4987-818e-2010a0f9c808",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-278 > .accordion-button",
+      "targets": [
+        ["css=#heading-278 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-278']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59520a76-87ec-41c6-a912-77230aa2f7a1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-278 .btn-primary",
+      "targets": [
+        ["css=#collapse-278 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-278']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To My Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "476cc0af-4957-4786-be6a-6c94f9ddc49b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-279 > .accordion-button",
+      "targets": [
+        ["css=#heading-279 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-279']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16cc12cf-8f9f-4ee9-83c4-4b98bbd054dc",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-279 .btn-primary",
+      "targets": [
+        ["css=#collapse-279 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-279']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To My Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bd1db598-9912-4e39-92bd-7bb4e936b3f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-280 > .accordion-button",
+      "targets": [
+        ["css=#heading-280 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-280']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73b095be-62c0-4b45-ba5d-ab63d9ba7af7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-280 .btn-primary",
+      "targets": [
+        ["css=#collapse-280 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-280']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To My Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a809dbff-3405-4bb0-8e13-47ffb6493c82",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-281 > .accordion-button",
+      "targets": [
+        ["css=#heading-281 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-281']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "550e5566-fd65-4440-9dcf-86eb65f5882f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-281 > .accordion-button",
+      "targets": [
+        ["css=#heading-281 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-281']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "42b230eb-8751-45bf-97ca-945908ab9951",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-282 p",
+      "targets": [
+        ["css=#heading-282 p", "css:finder"],
+        ["xpath=//div[@id='heading-282']/button/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/button/div/div[2]/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Discrete Structures in Computing I')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "91e0b019-173d-4d41-9a96-1773bb00d7e9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-282 .btn-primary",
+      "targets": [
+        ["css=#collapse-282 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-282']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "94bd3bba-f373-4791-81cc-ea005b464699",
+      "comment": "",
+      "command": "click",
+      "target": "id=savePlanBtn",
+      "targets": [
+        ["id=savePlanBtn", "id"],
+        ["css=#savePlanBtn", "css:finder"],
+        ["xpath=//button[@id='savePlanBtn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25429012-e6b0-41a3-a274-f3580c5865e4",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "594081a4-55c4-473f-b14d-5787c17895c0",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48b3b959-ade2-4622-81cc-344c681368bd",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "226fc452-ece2-4e5c-8c8c-32980a17d595",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d463f951-b9ec-4d19-88ea-1335159e460d",
+    "name": "OP_SENG_First-Year_W23",
+    "commands": [{
+      "id": "ce33f842-95e8-46ae-8758-cff8783e1ba2",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c052ac5d-0f30-4ef7-bdb4-85160d4a77fa",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f67f60e-8a68-43a5-8a99-560abb88e700",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Online Planner",
+      "targets": [
+        ["linkText=Online Planner", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Planner')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'planner')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Planner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acf8439e-8e28-4893-86f9-c18ecb011869",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineCheckbox1",
+      "targets": [
+        ["id=inlineCheckbox1", "id"],
+        ["css=#inlineCheckbox1", "css:finder"],
+        ["xpath=//input[@id='inlineCheckbox1']", "xpath:attributes"],
+        ["xpath=//div[@id='semester-filter']/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02d15343-7c52-4ef7-9443-8a63309120da",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineCheckbox3",
+      "targets": [
+        ["id=inlineCheckbox3", "id"],
+        ["css=#inlineCheckbox3", "css:finder"],
+        ["xpath=//input[@id='inlineCheckbox3']", "xpath:attributes"],
+        ["xpath=//div[@id='semester-filter']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "589f5e40-9a0e-4665-9107-069822b214a9",
+      "comment": "",
+      "command": "click",
+      "target": "id=subject-select",
+      "targets": [
+        ["id=subject-select", "id"],
+        ["name=subject_area", "name"],
+        ["css=#subject-select", "css:finder"],
+        ["xpath=//select[@id='subject-select']", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/div[2]/label/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e10ca116-ad74-4c75-9819-e6647338fa2b",
+      "comment": "",
+      "command": "select",
+      "target": "id=subject-select",
+      "targets": [],
+      "value": "label=CIS"
+    }, {
+      "id": "a86351ca-037a-401c-9710-2fdfb239e130",
+      "comment": "",
+      "command": "click",
+      "target": "id=show-eligible-only",
+      "targets": [
+        ["id=show-eligible-only", "id"],
+        ["css=#show-eligible-only", "css:finder"],
+        ["xpath=//input[@id='show-eligible-only']", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bac61ad3-e97b-4be0-886c-9cf6877172ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apply Filters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "640503f0-763b-468b-b5c1-1f0eb5ddb736",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-285 > .accordion-button",
+      "targets": [
+        ["css=#heading-285 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-285']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7922fb68-533d-4966-ac2c-2a48332df0bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-285 .btn-primary",
+      "targets": [
+        ["css=#collapse-285 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-285']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6695e3e7-7c68-4725-9d6a-5fd8d0f4a043",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-290 > .accordion-button",
+      "targets": [
+        ["css=#heading-290 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-290']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[5]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a014eac-8682-4637-b673-7d6cee746da6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-290 .btn-primary",
+      "targets": [
+        ["css=#collapse-290 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-290']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[5]/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b0e42f9-7a7b-4194-bc86-093cd03b9a09",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-287 > .accordion-button",
+      "targets": [
+        ["css=#heading-287 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[11]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-287']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f5cc735-c94d-43d9-ac24-830af6740318",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-287 .btn-primary",
+      "targets": [
+        ["css=#collapse-287 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-287']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b5b9ab5-553f-4fae-bb70-1881691d2af8",
+      "comment": "",
+      "command": "click",
+      "target": "id=savePlanBtn",
+      "targets": [
+        ["id=savePlanBtn", "id"],
+        ["css=#savePlanBtn", "css:finder"],
+        ["xpath=//button[@id='savePlanBtn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "75c21a8c-f3c6-40d1-a3b4-7c0225aa9f08",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "921037d2-48ab-40e8-aae4-e88974e348b7",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "adb0277b-6a8c-44d6-95e1-bfa9404cdedf",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b2777e3-1813-406b-9072-67ffedc3f283",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc63a688-402a-4a45-bdc6-ebcd63dc7fde",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db8ee292-6820-46f9-8d84-1dbbaae059b8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "34b20c35-ce5d-4e3d-b6a7-44e58131abb0",
+    "name": "OP_SENG_Graph_Visualization_CIS",
+    "commands": [{
+      "id": "cc70a542-680c-45db-bd48-d5fe12c52a6e",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "266b20d2-9597-4f0f-89fd-23e2c4e2b32c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b5d10a65-9c89-4c8d-aed5-fbab1f58d63f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prerequisite Visualiser",
+      "targets": [
+        ["linkText=Prerequisite Visualiser", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prerequisite Visualiser')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'courseTree')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prerequisite Visualiser')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cc71620-3e82-4d06-9874-b58321a37647",
+      "comment": "",
+      "command": "select",
+      "target": "id=subject-select",
+      "targets": [],
+      "value": "label=CIS"
+    }, {
+      "id": "34d75195-9db9-4e06-b375-f90ab1851b4a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='tree-select']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "46babc35-e72f-406b-8eb8-bb57c59336f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=canvas:nth-child(1)",
+      "targets": [
+        ["css=canvas:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cy']/div/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e862272-5dc8-4ef7-be70-79074e03a1fe",
+      "comment": "",
+      "command": "click",
+      "target": "css=canvas:nth-child(1)",
+      "targets": [
+        ["css=canvas:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cy']/div/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6cc49a2-5c48-48de-84ad-bd107ffb222c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ca5d3d17-ddf1-4976-9f05-fa8a1c3d9240",
+    "name": "OP_SENG_Graph_Visualization_CIS_2",
+    "commands": [{
+      "id": "7990ee5c-c10d-4132-8212-a19f29e0bf1c",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b13245dc-dbe7-42ec-bf12-3ebf48b74147",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dbaa0c9-e168-4f47-983d-24b05969f472",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Prerequisite Visualiser",
+      "targets": [
+        ["linkText=Prerequisite Visualiser", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Prerequisite Visualiser')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'courseTree')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Prerequisite Visualiser')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8a473e2d-6c37-4905-8555-15b63d42f92e",
+      "comment": "",
+      "command": "select",
+      "target": "id=subject-select",
+      "targets": [],
+      "value": "label=CIS"
+    }, {
+      "id": "ae749723-ac5e-4f4b-a8d0-868b27a4c524",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-primary",
+      "targets": [
+        ["css=.btn-primary", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='tree-select']/div/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "73e1b4cf-8762-4269-b539-72dd9e362768",
+      "comment": "",
+      "command": "click",
+      "target": "css=canvas:nth-child(1)",
+      "targets": [
+        ["css=canvas:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cy']/div/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39559763-fc36-422f-b413-d58456f731cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=canvas:nth-child(1)",
+      "targets": [
+        ["css=canvas:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cy']/div/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75a0c30c-6492-4499-bcaf-2daf4b26a916",
+      "comment": "",
+      "command": "click",
+      "target": "css=canvas:nth-child(1)",
+      "targets": [
+        ["css=canvas:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cy']/div/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "58c17f97-ecda-4386-886c-5d7e8010329d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "368f6304-2f31-48ce-94ae-16689292db79",
+    "name": "API_Docs",
+    "commands": [{
+      "id": "2bebe946-6907-437f-a9e9-9f5286857d0c",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/docs",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "57c8b13a-aa7c-414c-8a22-332a2c5ca1ae",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "262b5c85-d3f1-4a8d-a862-1dee1c0c5bdf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=List All Courses",
+      "targets": [
+        ["linkText=List All Courses", "linkText"],
+        ["css=.nav > .nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'List All Courses')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#list-all-courses')]", "xpath:href"],
+        ["xpath=//body/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'List All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f93dfc36-9d02-4d91-b4fb-4826e536ae69",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Search Course",
+      "targets": [
+        ["linkText=Search Course", "linkText"],
+        ["css=.nav > .nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Search Course')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#search-course')]", "xpath:href"],
+        ["xpath=//body/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search Course')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc8f604e-f5b5-46cd-bd45-e35a9f28fbe0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Search Course By Subject Area",
+      "targets": [
+        ["linkText=Search Course By Subject Area", "linkText"],
+        ["css=.nav > .nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Search Course By Subject Area')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#search-course-sbjarea')]", "xpath:href"],
+        ["xpath=//body/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search Course By Subject Area')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9543bdba-a1aa-484d-b24b-86c89796819f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=List Subject Areas",
+      "targets": [
+        ["linkText=List Subject Areas", "linkText"],
+        ["css=.nav-item:nth-child(4) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'List Subject Areas')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#list-sbjarea')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'List Subject Areas')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f73f3db-3fc6-4aaf-add7-9955ad163cf3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(5) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(5) > .nav-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Search Course By Subject Area')])[2]", "xpath:link"],
+        ["xpath=(//a[contains(@href, '#search-course-sbjarea')])[2]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d574f9fe-60f5-4642-af26-90c70f693423",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Get Prerequisites For Course",
+      "targets": [
+        ["linkText=Get Prerequisites For Course", "linkText"],
+        ["css=.nav-item:nth-child(6) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Get Prerequisites For Course')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#course-requirements')]", "xpath:href"],
+        ["xpath=//li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Get Prerequisites For Course')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1123ed2d-1505-46c8-b1b7-8f740732935e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Get Eligible Courses",
+      "targets": [
+        ["linkText=Get Eligible Courses", "linkText"],
+        ["css=.nav-item:nth-child(7) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Get Eligible Courses')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '#eligible-courses')]", "xpath:href"],
+        ["xpath=//li[7]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Get Eligible Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68c6e452-fa47-4e13-b7af-ae51cfaa1ccd",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6f199c93-160b-45f4-9b79-2c31430ab7e8",
+    "name": "OP_SENG_First-Year_Electives_All-Year",
+    "commands": [{
+      "id": "b3953bd4-ee92-4c9a-acac-e92b23e938f7",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5394b66a-ddeb-4b65-a531-93c0fdb13b0c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "854b5cd4-beb5-4293-9a0b-78e17fc6be11",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Online Planner",
+      "targets": [
+        ["linkText=Online Planner", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Planner')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'planner')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Planner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "89e7e10d-eaac-4a3e-bd63-f25a925622b3",
+      "comment": "",
+      "command": "click",
+      "target": "id=inlineCheckbox2",
+      "targets": [
+        ["id=inlineCheckbox2", "id"],
+        ["css=#inlineCheckbox2", "css:finder"],
+        ["xpath=//input[@id='inlineCheckbox2']", "xpath:attributes"],
+        ["xpath=//div[@id='semester-filter']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aad2ddf0-14bc-4f96-9325-9537776d637d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apply Filters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e331b1e2-6471-42cc-a269-3d71bc65af50",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-1 > .accordion-button",
+      "targets": [
+        ["css=#heading-1 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[9]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-1']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7865054-b384-4c92-b193-a964cfaac0f2",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-1 .btn-primary",
+      "targets": [
+        ["css=#collapse-1 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-1']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To My Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "309498f9-df63-4556-ace6-d517888c35d5",
+      "comment": "",
+      "command": "click",
+      "target": "id=subject-select",
+      "targets": [
+        ["id=subject-select", "id"],
+        ["name=subject_area", "name"],
+        ["css=#subject-select", "css:finder"],
+        ["xpath=//select[@id='subject-select']", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/div[2]/label/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37101cc5-b000-4121-8090-968ea22e0abe",
+      "comment": "",
+      "command": "select",
+      "target": "id=subject-select",
+      "targets": [],
+      "value": "label=STAT"
+    }, {
+      "id": "77934637-d3c3-48bd-a2c3-4aa48e0c53f1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn:nth-child(4)",
+      "targets": [
+        ["css=.btn:nth-child(4)", "css:finder"],
+        ["xpath=(//button[@type='submit'])[2]", "xpath:attributes"],
+        ["xpath=//form[@id='catalog-filter']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apply Filters')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eae8d8b1-f64b-4f4b-889e-540ca8961a06",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-1761 > .accordion-button",
+      "targets": [
+        ["css=#heading-1761 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[10]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-1761']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c4d105-1391-40af-bc68-4d62d89557f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-1761 .btn-primary",
+      "targets": [
+        ["css=#collapse-1761 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-1761']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To My Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "16d343d0-286f-4b29-8998-ae913cfc86b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=savePlanBtn",
+      "targets": [
+        ["id=savePlanBtn", "id"],
+        ["css=#savePlanBtn", "css:finder"],
+        ["xpath=//button[@id='savePlanBtn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Save Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a890f24b-3930-45b7-8e3c-49d3e5931601",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "162d4229-175e-43aa-93a1-31538bc1d4fa",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dbb8745c-372b-472e-8e1f-02820c20d4d2",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Successfully saved planned courses!",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "096f2924-3f66-488b-8736-ff6ad048eee9",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cc543893-c2c0-4865-9b40-9e7673191701",
+    "name": "OP_to_Graph",
+    "commands": [{
+      "id": "6a92778b-3a8b-4454-add9-3287593b1704",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/planner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6f952950-86ac-4c1c-b5a9-802399c5ac05",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32ee1c1d-bc93-49d7-9dfd-8247fee84f67",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-5 > .accordion-button",
+      "targets": [
+        ["css=#heading-5 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[23]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-5']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c2f6dcf-f793-4738-b75b-21ff1d27aebe",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-5 .btn-outline-secondary",
+      "targets": [
+        ["css=#collapse-5 .btn-outline-secondary", "css:finder"],
+        ["xpath=//div[@id='collapse-5']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div[2]/div/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4b1c1c4-829f-4bb3-b7ee-adbdf8345f62",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-5 .btn-outline-secondary",
+      "targets": [
+        ["css=#collapse-5 .btn-outline-secondary", "css:finder"],
+        ["xpath=//div[@id='collapse-5']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[4]/div[2]/div/div/div/button", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win6592",
+      "windowTimeout": 2000
+    }, {
+      "id": "ed1ace4c-de75-4695-9983-d4bd5e39c1d8",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8e75d41-f298-4890-b647-1d6356f4b4ae",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win6592}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4824ef0-ea0f-4b13-b6dd-490ecb272465",
+      "comment": "",
+      "command": "click",
+      "target": "css=canvas:nth-child(1)",
+      "targets": [
+        ["css=canvas:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='cy']/div/canvas", "xpath:idRelative"],
+        ["xpath=//canvas", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7820e06-1172-4d51-891b-a14650e0506b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff0be9e5-5c8b-43cd-8af5-a5dd2394d51e",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "138c1f95-bf90-4a1e-af9c-dff4095b9a7c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac257eac-d676-426c-a794-9548d2bd9962",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e76b2390-2345-4a08-8758-396d4d3a40d7",
+    "name": "OP_Remove_Course",
+    "commands": [{
+      "id": "fc8d3bb7-f3e4-459b-837a-8a5d95f6458c",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "21b884fc-5fca-4a32-84e7-3b2ebfc6a8f1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d90d0fbe-110c-45d4-88e9-27aaaedda81e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Online Planner",
+      "targets": [
+        ["linkText=Online Planner", "linkText"],
+        ["css=.nav-item:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Online Planner')]", "xpath:link"],
+        ["xpath=//div[@id='navbarNav']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'planner')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Online Planner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea03eae4-9675-44b7-a31e-7447687da274",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-3 > .accordion-button",
+      "targets": [
+        ["css=#heading-3 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[21]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-3']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f00f9e70-bcfb-4852-a8b9-137d18652d3c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-3 .btn-primary",
+      "targets": [
+        ["css=#collapse-3 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-3']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div[2]/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39f28dc6-d677-4701-9f8d-dd3d393f41bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-3 .btn-primary",
+      "targets": [
+        ["css=#collapse-3 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-3']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[19]/div[2]/div/div/div[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ab75342-1a7a-45ba-91a0-3a1de719e7f8",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "aee9e1f5-46b7-4c5b-9765-7203030a35f7",
+    "name": "OP_Add_Course_To_Graph",
+    "commands": [{
+      "id": "094c9362-e20f-4273-ab9f-edbe468e87f0",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-10.socs.uoguelph.ca/planner",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cbc1775b-5ff0-4266-8eb5-f66b3ab97a4a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1055",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7ff0f6fd-1fa5-4d64-bfa3-1df4ea44fb21",
+      "comment": "",
+      "command": "click",
+      "target": "css=#heading-2 > .accordion-button",
+      "targets": [
+        ["css=#heading-2 > .accordion-button", "css:finder"],
+        ["xpath=(//button[@type='button'])[20]", "xpath:attributes"],
+        ["xpath=//div[@id='heading-2']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "39826d03-4b5d-4802-a0bb-7950fe9e50dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-2 .btn-primary",
+      "targets": [
+        ["css=#collapse-2 .btn-primary", "css:finder"],
+        ["xpath=//div[@id='collapse-2']/div/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div[2]/div/div/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add To My Plan')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f4e10cd-2382-4bb2-9870-09210e1e507d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#collapse-2 .btn-outline-secondary",
+      "targets": [
+        ["css=#collapse-2 .btn-outline-secondary", "css:finder"],
+        ["xpath=//div[@id='collapse-2']/div/div/div/button", "xpath:idRelative"],
+        ["xpath=//div[19]/div[2]/div/div/div/button", "xpath:position"]
+      ],
+      "value": "",
+      "opensWindow": true,
+      "windowHandleName": "win5740",
+      "windowTimeout": 2000
+    }, {
+      "id": "19a99364-00fa-41a9-8ba8-4c0a8500f702",
+      "comment": "",
+      "command": "storeWindowHandle",
+      "target": "root",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f484c4fb-a7f6-4d6c-9233-f7b41e767602",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${win5740}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c447b91-a870-426d-b48b-92317ff215a0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d13ac357-562c-4f43-ac82-595d71e9f3b4",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${root}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8d5b79c-fd0f-4c7e-b05e-f1f4d5678525",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e7f6b1c-3238-4abd-a2d7-778418f086b2",
+      "comment": "",
+      "command": "selectWindow",
+      "target": "handle=${undefined}",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "5f2ea2b3-1100-4be7-8edc-9959ff1891cf",
+    "name": "Site_Test_Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["368f6304-2f31-48ce-94ae-16689292db79", "aee9e1f5-46b7-4c5b-9765-7203030a35f7", "e76b2390-2345-4a08-8758-396d4d3a40d7", "6f199c93-160b-45f4-9b79-2c31430ab7e8", "d463f951-b9ec-4d19-88ea-1335159e460d", "ba1899b3-2b2b-4093-bf8f-199ea0d0daba", "34b20c35-ce5d-4e3d-b6a7-44e58131abb0", "ca5d3d17-ddf1-4976-9f05-fa8a1c3d9240", "cc543893-c2c0-4865-9b40-9e7673191701"]
+  }],
+  "urls": [],
+  "plugins": []
+}

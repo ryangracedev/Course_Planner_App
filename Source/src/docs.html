@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>API Documentation</title>
+        <link rel="stylesheet" href="./styles/styles_old.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>REST API Documentation</h1>
+            <div class="endpoint">
+                <h2>List All Courses</h2>
+                <p class="api-endpoint"><span>GET</span>https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course=all</p>
+                <h3>Description</h2>
+                <p>
+                    Returns a list of all courses available. The data returned for each course is:
+                </p>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                            <th style="width:25%">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The abbriviated name for the subject area the course belongs to</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>The unique id for the course in it's subject area. Larger numbers indicate more advanced courses</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>The display name of the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>weight</td>
+                            <td>The number of credits granted for completing the course</td>
+                            <td>Float</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>The text details of the course including what material is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>department</td>
+                            <td>The name of the academic department that administrates the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>location</td>
+                            <td>Where the course is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>prerequisites</td>
+                            <td>The prerequisites of the course in a textual representation</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>credits_required</td>
+                            <td>The number of credits needed to take the course</td>
+                            <td>Float</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="endpoint">
+                <h2>Search Course</h2>
+                <p class="api-endpoint"><span>GET</span>https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?course=&lt;course_code&gt;</p>
+                <h3>Query Parameters</h3>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>course_code</td>
+                            <td>The course code to search. Should be of the format [subject_area]*[course_number]</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Description</h2>
+                <p>
+                    Returns a list of courses that match the specified course. If the course does not match anything, an empty list is returned. The data returned is:
+                </p>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                            <th style="width:25%">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The abbriviated name for the subject area the course belongs to</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>The unique id for the course in it's subject area. Larger numbers indicate more advanced courses</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>The display name of the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>weight</td>
+                            <td>The number of credits granted for completing the course</td>
+                            <td>Float</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>The text details of the course including what material is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>department</td>
+                            <td>The name of the academic department that administrates the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>location</td>
+                            <td>Where the course is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>prerequisites</td>
+                            <td>The prerequisites of the course in a textual representation</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>credits_required</td>
+                            <td>The number of credits needed to take the course</td>
+                            <td>Float</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="endpoint">
+                <h2>Search Courses By Subject Area</h2>
+                <p class="api-endpoint"><span>GET</span>https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?subject=&lt;subject_area&gt;</p>
+                <h3>Query Parameters</h3>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The subject_area to search</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Description</h2>
+                <p>
+                    Returns a list of courses that match the specified subject area. If the subject area does not match anything, an empty list is returned. The data returned is:
+                </p>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                            <th style="width:25%">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The abbriviated name for the subject area the course belongs to</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>The unique id for the course in it's subject area. Larger numbers indicate more advanced courses</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>The display name of the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>weight</td>
+                            <td>The number of credits granted for completing the course</td>
+                            <td>Float</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>The text details of the course including what material is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>department</td>
+                            <td>The name of the academic department that administrates the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>location</td>
+                            <td>Where the course is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>prerequisites</td>
+                            <td>The prerequisites of the course in a textual representation</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>credits_required</td>
+                            <td>The number of credits needed to take the course</td>
+                            <td>Float</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="endpoint">
+                <h2>List All Subject Areas</h2>
+                <p class="api-endpoint"><span>GET</span>https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?subject=all;</p>
+                <h3>Description</h2>
+                <p>
+                    Returns a list of all available subject codes. The data returned is:
+                </p>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                            <th style="width:25%">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The abbriviated name for the subject area the course belongs to</td>
+                            <td>String</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="endpoint">
+                <h2>List All Prerequisite Courses</h2>
+                <p class="api-endpoint"><span>GET</span>https://cis3760f23-10.socs.uoguelph.ca/rest/api.php?prereq=&lt;course_code&gt;</p>
+                <h3>Description</h2>
+                <p>
+                    Returns a list of all available subject codes. The data returned is:
+                </p>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                            <th style="width:25%">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>id</td>
+                            <td>The id of the group the requirement belongs to</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>parent_id</td>
+                            <td>The id of the parent group the requirement is a child of. If null this is the root node of the requirements tree</td>
+                            <td>Integer | Null</td>
+                        </tr>
+                        <tr>
+                            <td>num_required</td>
+                            <td>The number of requirements that must be satisfied in this group plus the number of children groups that must be satisfied</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The course subject area of the requirement</td>
+                            <td>String | Null</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>The course number of the requirement</td>
+                            <td>Integer | Null</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>The course name of the requirement</td>
+                            <td>String | Null</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="endpoint">
+                <h2>List All Qualified Courses</h2>
+                <p class="api-endpoint"><span>POST</span>https://cis3760f23-10.socs.uoguelph.ca/rest/api.php</p>
+                <h3>Request Body</h3>
+                <p>The body of the request should only contain the courses that have already been taken. Each course should use the key <code>course&lt;id&gt;</code> where <code>id</code> is a unique number for each course</p>
+                <b>Example:</b>
+                <p>This command can be executed in the browser's console</p>
+                <div class="code-block">
+                <pre>
+                <code>
+    fetch("https://cis3760f23-10.socs.uoguelph.ca/rest/api.php", {
+        method: "POST",
+        body: JSON.stringify({
+            "course1": "CIS*2750", "course2": "CIS*3750"
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+                </code>
+                </pre>
+                </div>
+                <h3>Description</h2>
+                <p>
+                    Returns a list of all available subject codes that the user can take given the courses input. The data returned is:
+                </p>
+                <table class="api-values">
+                    <thead>
+                        <tr>
+                            <th style="width:25%">Field</th>
+                            <th>Value</th>
+                            <th style="width:25%">Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>subject_area</td>
+                            <td>The abbriviated name for the subject area the course belongs to</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>number</td>
+                            <td>The unique id for the course in it's subject area. Larger numbers indicate more advanced courses</td>
+                            <td>Integer</td>
+                        </tr>
+                        <tr>
+                            <td>name</td>
+                            <td>The display name of the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>weight</td>
+                            <td>The number of credits granted for completing the course</td>
+                            <td>Float</td>
+                        </tr>
+                        <tr>
+                            <td>description</td>
+                            <td>The text details of the course including what material is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>department</td>
+                            <td>The name of the academic department that administrates the course</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>location</td>
+                            <td>Where the course is taught</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>prerequisites</td>
+                            <td>The prerequisites of the course in a textual representation</td>
+                            <td>String</td>
+                        </tr>
+                        <tr>
+                            <td>credits_required</td>
+                            <td>The number of credits needed to take the course</td>
+                            <td>Float</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

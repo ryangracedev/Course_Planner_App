@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Check</title>
+</head>
+<body>
+    <label for="bday">Enter your birthday:</label>
+    <input type="date" id="bday" required>
+    <button onclick="displayBirthday()">Hide/Unhide Birthday</button>
+    <h2 id="displayBirthday" class="hidden"></h2>
+
+    <!-- Hiding h2 tag first -->
+        <style>
+            .hidden {
+                display: none;
+            }
+        </style>
+
+    <script>
+        function displayBirthday() {
+            var user_bday = document.getElementById("bday").value;
+            var displayBirthday = document.getElementById("displayBirthday");
+
+            // checking if valid input
+            if (isBirthdayFuture(user_bday)) {
+                displayBirthday.textContent = "Your birthday is: " + user_bday;
+                displayBirthday.classList.toggle("hidden");
+            } else {
+                alert("Please enter a valid birthday.");
+            }
+        }
+
+        function isBirthdayFuture(date) {
+            var today = new Date();
+            // getting individual components
+            var dd = String(today.getDate()).padStart(2, '0');
+            var mm = String(today.getMonth() + 1).padStart(2, '0'); 
+            var yyyy = today.getFullYear();
+
+            today = yyyy + '-' + mm + '-' + dd;
+            console.log(today);
+            console.log(date);
+            return date <= today;
+            
+        }
+    </script>
+</body>
+</html>
