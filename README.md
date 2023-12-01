@@ -1,6 +1,6 @@
 ![Guelph Campus](https://admission.uoguelph.ca/sites/default/files/images/GeneralBanner5_2018.jpg)
 
-# Sprint 7
+# Online Course Planner
 
 ## REST API
 
